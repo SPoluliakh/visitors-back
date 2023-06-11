@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { Log } = require("../models/logModel");
 
 const logController = async (req, res) => {
   const visitData = req.body;
@@ -11,12 +12,14 @@ const logController = async (req, res) => {
   );
   visitData.country = ipInfoResponse.data.country;
 
-  // console.log("/////////", visitData);
+  console.log("/////////", visitData);
+  const newVisitor = await Log.create({ ...visitData });
+
   res.json({
     status: "success",
     code: 200,
     data: {
-      visitData,
+      visitData: newVisitor,
     },
   });
 };

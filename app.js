@@ -11,6 +11,4 @@ app.use(express.json());
 
 app.post("/log", logRouret);
 
-app.listen(4000, () => {
-  console.log("Сервер запущен на порту 4000");
-});
+module.exports = app;
