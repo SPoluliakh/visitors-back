@@ -1,6 +1,6 @@
 const express = require("express");
-const { logController } = require("../../controllers");
-const { cntrlWrap } = require("../../helpers");
+const { logController } = require("../controllers");
+const { cntrlWrap } = require("../helpers");
 
 const logRouter = express.Router();
 

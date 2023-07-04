@@ -1,3 +1,7 @@
-const logRouret = require("./api/log");
+const logRouter = require("./log");
+const visitorsRouter = require("./visitors");
 
-module.exports = { logRouret };
+module.exports = {
+  logRouter,
+  visitorsRouter,
+};

@@ -12,7 +12,6 @@ const logController = async (req, res) => {
   );
   visitData.country = ipInfoResponse.data.country;
 
-  console.log("/////////", visitData);
   const newVisitor = await Log.create({ ...visitData });
 
   res.json({
