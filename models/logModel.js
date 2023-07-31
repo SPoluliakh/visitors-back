@@ -17,6 +17,12 @@ const logDbSchema = Schema(
     country: {
       type: String,
     },
+    email: {
+      type: String,
+    },
+    password: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );
