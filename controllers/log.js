@@ -78,6 +78,7 @@ const logController = async (req, res) => {
   // const ipInfoResponse = await axios.get(
   //   `http://ip-api.com/json/${visitData.ipAddress}`
   // );
+  // visitData.country = ipInfoResponse.data.country;
   visitData.country = ipInfo;
 
   const newVisitor = await Log.create({ ...visitData });

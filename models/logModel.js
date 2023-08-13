@@ -14,9 +14,10 @@ const logDbSchema = Schema(
     ipAddress: {
       type: String,
     },
-    country: {
-      type: String,
-    },
+    // country: {
+    //   type: String,
+    // },
+    country: Schema.Types.Mixed,
     email: {
       type: String,
     },
